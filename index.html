@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de Estruturas de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Visualizador de Estruturas de Dados</h1>
+        <div class="tabs">
+            <button class="tablink" onclick="abrirAba(event, 'Arvores')">Árvores</button>
+            <button class="tablink" onclick="abrirAba(event, 'ListaLigada')">Lista Ligada</button>
+            <button class="tablink" onclick="abrirAba(event, 'Grafos')">Grafos</button>
+        </div>
+
+        <div id="Arvores" class="tabcontent">
+            <h2>Árvores</h2>
+            <input type="number" id="entradaArvore" placeholder="Adicionar Nó">
+            <button onclick="adicionarNoArvore()">Adicionar</button>
+            <input type="number" id="removerArvore" placeholder="Remover Nó">
+            <button onclick="removerNoArvore()">Remover</button>
+            <button onclick="mostrarPreOrdem()">Pré-Ordem</button>
+            <button onclick="mostrarEmOrdem()">Em-Ordem</button>
+            <button onclick="mostrarPosOrdem()">Pós-Ordem</button>
+            <canvas id="canvasArvore"></canvas>
+            <div id="resultadoArvore"></div>
+        </div>
+
+         <div id="ListaLigada" class="tabcontent">
+            <h2>Lista Ligada</h2>
+            <input type="number" id="entradaLista" placeholder="Adicionar Nó">
+            <button onclick="adicionarNoLista()">Adicionar</button>
+            <input type="number" id="entradaRemoverLista" placeholder="Remover Nó">
+            <button onclick="removerNoLista()">Remover</button>
+            <canvas id="canvasLista"></canvas>
+        </div>
+
+
+       <div id="Grafos" class="tabcontent">
+            <h2>Grafos</h2>
+            <input type="number" id="entradaGrafoOrigem" placeholder="Vértice de Origem">
+            <input type="number" id="entradaGrafoDestino" placeholder="Vértice de Destino">
+            <button onclick="adicionarArestaGrafo()">Adicionar Aresta</button>
+            <input type="number" id="entradaRemoverVertice" placeholder="Remover Vértice">
+            <button onclick="removerVerticeGrafo()">Remover Vértice</button>
+            <input type="number" id="entradaRemoverArestaOrigem" placeholder="Origem Aresta">
+            <input type="number" id="entradaRemoverArestaDestino" placeholder="Destino Aresta">
+            <button onclick="removerArestaGrafo()">Remover Aresta</button>
+            <canvas id="canvasGrafo"></canvas>
+        </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
